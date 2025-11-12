@@ -63,8 +63,12 @@ const Themes: React.FC = () => {
   );
 
   // debounces favoriting of themes in a queue
-  const addQueue = useActionQueue<Theme>(addThemeToFavorites, 300);
-  const removeQueue = useActionQueue<Theme>(removeThemeFromFavorites, 300);
+  const addQueue = useActionQueue<Theme>(addThemeToFavorites, 300, {
+    dedupeKey: (theme) => theme.id,
+  });
+  const removeQueue = useActionQueue<Theme>(removeThemeFromFavorites, 300, {
+    dedupeKey: (theme) => theme.id,
+  });
 
   /**
    * Update favorites count both locally and via API queue.

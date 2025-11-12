@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "cohort": "Vylepšenia Gallery Website",
+    "owner": "Mykyta Olym"
+  },
+  "issue": {
+    "clocTargets": ["src"],
+    "complexity": "netriviálna",
+    "outcome": "merged",
+    "notes": [
+      "Prepracovaný hook pre akčnú frontu bez JSON deduplikácie, s cache dedupe kľúčov.",
+      "Vytvorené benchmark skripty na validáciu výkonu po refaktoringu." 
+    ]
+  },
+  "tests": {
+    "wroteTests": true,
+    "coverageImproved": true,
+    "usedTestDoubles": true,
+    "details": [
+      "Vitest pokrýva useActionQueue, služby cache a zdieľané utility.",
+      "Testy používajú vi.fn/vi.mock na simuláciu asynchrónnych handlerov." 
+    ]
+  },
+  "profiling": {
+    "foundBottleneck": true,
+    "measuredBeforeAfter": true,
+    "metricImproved": true,
+    "notes": [
+      "Pôvodná fronta (JSON stringify) trvala ~218 s na 100k operácií, optimalizovaná verzia pod 1 s.",
+      "Veľkosť fronty klesla z 2 500 duplikátov na 500 unikátnych položiek." 
+    ]
+  },
+  "devOps": {
+    "score": 6,
+    "services": [
+      {
+        "name": "GitHub Actions (quality-checks)",
+        "phase": "CI",
+        "description": "Lint + vitest s pokrytím pri každom pushi/PR."
+      },
+      {
+        "name": "Vitest + V8 Coverage", 
+        "phase": "Test",
+        "description": "Poskytuje lokálne aj CI reporty o pokrytí." 
+      },
+      {
+        "name": "Automatizovaný portál kvality",
+        "phase": "Reporting",
+        "description": "Stránka s profilovaním, pokrytím a bodovaním." 
+      }
+    ],
+    "additionalIntegrations": [
+      "Husky pre-commit guard na ESLint formátovanie"
+    ],
+    "notes": [
+      "README teraz odkazuje na portál kvality pre rýchle zdieľanie výsledkov." 
+    ]
+  },
+  "adjustment": 0
+}

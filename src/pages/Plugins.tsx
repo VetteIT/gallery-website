@@ -51,8 +51,12 @@ const Plugins: React.FC = () => {
   const [noMorePlugins, setNoMorePlugins] = useState<boolean>(false);
 
   // debounces favoriting of plugins in a queue
-  const addQueue = useActionQueue<Plugin>(addPluginToFavorites, 300);
-  const removeQueue = useActionQueue<Plugin>(removePluginFromFavorites, 300);
+  const addQueue = useActionQueue<Plugin>(addPluginToFavorites, 300, {
+    dedupeKey: (plugin) => plugin.id,
+  });
+  const removeQueue = useActionQueue<Plugin>(removePluginFromFavorites, 300, {
+    dedupeKey: (plugin) => plugin.id,
+  });
 
   const updateFavorites = (plugin: Plugin, isFavoriting: boolean) => {
     if (!isLoggedIn) {

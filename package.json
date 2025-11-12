@@ -53,8 +53,10 @@
     "@typescript-eslint/eslint-plugin": "^8.32.1",
     "@typescript-eslint/parser": "^8.32.1",
     "@vitejs/plugin-react": "^4.2.1",
+    "@vitest/coverage-v8": "^3.2.4",
     "@vitest/ui": "^3.1.4",
     "autoprefixer": "^10.4.19",
+    "cloc": "^2.6.0-cloc",
     "eslint": "^9.20.1",
     "eslint-plugin-prettier": "^5.4.0",
     "eslint-plugin-react": "^7.34.4",
@@ -82,7 +84,8 @@
     "build": "vite build",
     "start": "vite --mode local-dev",
     "preview": "vite preview",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "report": "node scripts/generateQualityReport.mjs"
   },
   "browserslist": {
     "production": [
