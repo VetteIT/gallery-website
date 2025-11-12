@@ -14,7 +14,6 @@ vi.mock('@/context/GlobalModalContext', () => {
   return { useGlobalModal };
 });
 
-
 vi.mock('./Modals/LoginModal', () => ({
   __esModule: true,
   default: () => <div data-testid="mock-login-modal">LOGIN_MODAL</div>,

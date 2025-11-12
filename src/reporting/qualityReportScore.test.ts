@@ -69,7 +69,10 @@ describe('quality scoring', () => {
 
     const markdown = renderMarkdownReport(payload);
     expect(markdown).toContain('# Projektový výkaz kvality');
-    expect(markdown).toContain('| Riešenie issue |');
+    expect(markdown).toContain('### Veľkosť projektu (cloc)');
+    expect(markdown).toContain('### Profilovanie');
+    expect(markdown).toContain('### Pokrytie');
+    expect(markdown).toContain('### DevOps nástroje');
     expect(markdown).toContain('Počet iterácií na každú metódu');
   });
 
