@@ -1,24 +1,24 @@
 # Projektový výkaz kvality
 
-Vygenerované: 2025-11-22T21:13:39.096Z
+Vygenerované: 2025-11-22T21:50:05.222Z
 
-Počet iterácií na každú metódu: `5 000`
+Počet iterácií na každú metódu: `5,000`
 
 ### Veľkosť projektu (cloc)
 
-Celkový počet riadkov kódu: **10 290**
+Celkový počet riadkov kódu: **8,580**
 
 | Cieľ | Riadky kódu | Zdroj |
 | --- | ---:| --- |
-| src | 10 290 | fallback počítanie |
+| src | 8,580 | npx cloc |
 
 ### Profilovanie
 
 | Režim | Čas (ms) | Veľkosť fronty |
 | --- | ---:| ---:|
-| Pôvodná implementácia | 8 017,50 | 2 500 |
-| Optimalizovaná verzia | 34,18 | 500 |
-| Zrýchlenie | 234.57× | — |
+| Pôvodná implementácia | 11,613.38 | 2,500 |
+| Optimalizovaná verzia | 28.82 | 500 |
+| Zrýchlenie | 402.96× | — |
 
 Poznámky:
 - Pôvodná fronta (JSON stringify) trvala ~218 s na 100k operácií, optimalizovaná verzia pod 1 s.
@@ -28,8 +28,8 @@ Poznámky:
 
 | Metrika | Pokryté | Celkom | Pokrytie % |
 | --- | ---:| ---:| ---:|
-| Statements | 2 352 | 7 349 | 32.00% |
-| Lines | 2 352 | 7 349 | 32.00% |
+| Statements | 2,287 | 7,272 | 31.45% |
+| Lines | 2,287 | 7,272 | 31.45% |
 | Branches | 126 | 211 | 59.72% |
 
 Poznámky:
