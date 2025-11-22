@@ -17,6 +17,7 @@ on:
       - "scripts/**" # ignore all scripts
       - "ssr/**" # ignore ssr files
       - ".github/**/*.md" # ignore markdown files for .github
+      - ".github/workflows/**" # ignore workflow changes
       - ".github/FUNDING.yml" # ignore funding yml
       - ".eslintrc" # ignore eslint changes
       - ".gitignore" # ignore git ignore changes
