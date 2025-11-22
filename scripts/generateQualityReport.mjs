@@ -572,10 +572,6 @@ export const renderHtmlReport = (payload) => {
                 '<h2>Iterácie profilovania</h2>' +
                 '<strong>' + formatInt(iterations) + '</strong>' +
               '</div>' +
-              '<div class="score-card">' +
-                '<h2>Celkové skóre</h2>' +
-                '<strong>' + (scores.total ?? 0) + '/40</strong>' +
-              '</div>' +
             '</div>' +
           '</header>'
         );

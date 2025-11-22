@@ -1,24 +1,24 @@
 # Projektový výkaz kvality
 
-Vygenerované: 2025-11-11T20:51:00.242Z
+Vygenerované: 2025-11-22T21:13:39.096Z
 
-Počet iterácií na každú metódu: `8 000`
+Počet iterácií na každú metódu: `5 000`
 
 ### Veľkosť projektu (cloc)
 
-Celkový počet riadkov kódu: **10 283**
+Celkový počet riadkov kódu: **10 290**
 
 | Cieľ | Riadky kódu | Zdroj |
 | --- | ---:| --- |
-| src | 10 283 | fallback počítanie |
+| src | 10 290 | fallback počítanie |
 
 ### Profilovanie
 
 | Režim | Čas (ms) | Veľkosť fronty |
 | --- | ---:| ---:|
-| Pôvodná implementácia | 14 516,17 | 2 500 |
-| Optimalizovaná verzia | 53,54 | 500 |
-| Zrýchlenie | 271.13× | — |
+| Pôvodná implementácia | 8 017,50 | 2 500 |
+| Optimalizovaná verzia | 34,18 | 500 |
+| Zrýchlenie | 234.57× | — |
 
 Poznámky:
 - Pôvodná fronta (JSON stringify) trvala ~218 s na 100k operácií, optimalizovaná verzia pod 1 s.
@@ -28,9 +28,9 @@ Poznámky:
 
 | Metrika | Pokryté | Celkom | Pokrytie % |
 | --- | ---:| ---:| ---:|
-| Statements | 493 | 6 648 | 7.42% |
-| Lines | 493 | 6 648 | 7.42% |
-| Branches | 85 | 154 | 55.19% |
+| Statements | 2 352 | 7 349 | 32.00% |
+| Lines | 2 352 | 7 349 | 32.00% |
+| Branches | 126 | 211 | 59.72% |
 
 Poznámky:
 - Vitest pokrýva useActionQueue, služby cache a zdieľané utility.
@@ -40,7 +40,7 @@ Poznámky:
 
 - **GitHub Actions (quality-checks)** (CI) — Lint + vitest s pokrytím pri každom pushi/PR.
 - **Vitest + V8 Coverage** (Test) — Poskytuje lokálne aj CI reporty o pokrytí.
-- **Automatizovaný portál kvality** (Reporting) — Statická stránka s profilovaním, pokrytím a bodovaním.
+- **Automatizovaný portál kvality** (Reporting) — Stránka s profilovaním, pokrytím a bodovaním.
 
 Extra integrácie:
 - Husky pre-commit guard na ESLint formátovanie

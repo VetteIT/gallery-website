@@ -122,46 +122,46 @@
       </noscript>
     </div>
     <script id="report-data" type="application/json">{
-  "generatedAt": "2025-11-11T20:51:00.242Z",
-  "iterations": 8000,
+  "generatedAt": "2025-11-22T21:13:39.096Z",
+  "iterations": 5000,
   "metrics": {
     "profiling": {
       "legacy": {
         "mode": "legacy",
-        "iterations": 8000,
-        "durationMs": 14516.17,
+        "iterations": 5000,
+        "durationMs": 8017.5,
         "finalQueueSize": 2500
       },
       "optimized": {
         "mode": "optimized",
-        "iterations": 8000,
-        "durationMs": 53.54,
+        "iterations": 5000,
+        "durationMs": 34.18,
         "finalQueueSize": 500
       }
     },
     "coverage": {
       "statements": {
-        "covered": 493,
-        "total": 6648,
-        "pct": "7.42"
+        "covered": 2352,
+        "total": 7349,
+        "pct": "32.00"
       },
       "lines": {
-        "covered": 493,
-        "total": 6648,
-        "pct": "7.42"
+        "covered": 2352,
+        "total": 7349,
+        "pct": "32.00"
       },
       "branches": {
-        "covered": 85,
-        "total": 154,
-        "pct": "55.19"
+        "covered": 126,
+        "total": 211,
+        "pct": "59.72"
       }
     },
     "cloc": {
-      "totalCodeLines": 10283,
+      "totalCodeLines": 10290,
       "perTarget": [
         {
           "target": "src",
-          "code": 10283,
+          "code": 10290,
           "fallback": true,
           "error": "Command failed: npx cloc \"src\" --json --quiet\n'\"perl\"' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n"
         }
@@ -220,7 +220,7 @@
     {
       "name": "Automatizovaný portál kvality",
       "phase": "Reporting",
-      "description": "Statická stránka s profilovaním, pokrytím a bodovaním."
+      "description": "Stránka s profilovaním, pokrytím a bodovaním."
     }
   ],
   "additionalIntegrations": [
@@ -333,10 +333,6 @@
               '<div class="score-card">' +
                 '<h2>Iterácie profilovania</h2>' +
                 '<strong>' + formatInt(iterations) + '</strong>' +
-              '</div>' +
-              '<div class="score-card">' +
-                '<h2>Celkové skóre</h2>' +
-                '<strong>' + (scores.total ?? 0) + '/40</strong>' +
               '</div>' +
             '</div>' +
           '</header>'

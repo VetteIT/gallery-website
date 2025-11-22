@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: read
+      contents: write
       actions: read
 
     steps:
@@ -39,3 +39,15 @@ jobs:
         with:
           name: vitest-coverage
           path: coverage
+
+      - name: Generate Quality Report
+        if: success() && github.ref == 'refs/heads/main'
+        run: npm run report
+
+      - name: Upload Quality Report as Artifact
+        if: success() && github.ref == 'refs/heads/main'
+        uses: actions/upload-artifact@v4
+        with:
+          name: quality-report-ci
+          path: docs/
+          retention-days: 90

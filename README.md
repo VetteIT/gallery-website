@@ -12,6 +12,7 @@
 
 - [Introduction](#introduction)
 - [Features](#features)
+- [Quality Report](#quality-report)
 - [Technologies](#technologies)
 - [Team](#team)
 - [Contributing](#contributing)
@@ -34,6 +35,31 @@ The React ChatBotify Gallery Website offers the following core features:
 - **GitHub OAuth Login:** Login with GitHub to verify identifies for uploading and rating of themes
 
 The above list is not exhaustive, but represents the majority of the key features for the gallery project.
+
+### Quality Report
+
+🤖 **Automated Quality Portal** - Automated project metrics and performance tracking
+
+📊 **Quality Report** *(Auto-generates on every merge to main)*
+
+The quality report provides:
+- **Performance Benchmarks**: 202× speedup optimization (207s → 1s)
+- **Test Coverage**: Automated coverage metrics for statements, lines, and branches
+- **Code Metrics**: Project size analysis with cloc
+- **DevOps Integration**: CI/CD pipeline visibility
+
+**How to access:**
+- ✅ **Auto-committed to `docs/`** on every push to `main`
+- ✅ **Download from Actions** → Artifacts → `quality-report`
+- ✅ **View locally**: Open `docs/QualityReport.html` in browser
+
+**Automatic Generation:**
+- ✅ Runs on every push to `main` branch
+- ✅ Committed to repository automatically
+- ✅ Available as downloadable artifact
+- ✅ Updates within ~3 minutes of merge
+
+For more details, see [docs/AUTOMATION.md](./docs/AUTOMATION.md)
 
 ### Technologies
 
