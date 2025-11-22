@@ -1,6 +1,6 @@
 # Projektový výkaz kvality
 
-Vygenerované: 2025-11-22T21:53:42.856Z
+Vygenerované: 2025-11-22T21:57:24.425Z
 
 Počet iterácií na každú metódu: `5,000`
 
@@ -16,9 +16,9 @@ Celkový počet riadkov kódu: **8,580**
 
 | Režim | Čas (ms) | Veľkosť fronty |
 | --- | ---:| ---:|
-| Pôvodná implementácia | 10,883.52 | 2,500 |
-| Optimalizovaná verzia | 29.01 | 500 |
-| Zrýchlenie | 375.16× | — |
+| Pôvodná implementácia | 11,000.35 | 2,500 |
+| Optimalizovaná verzia | 29.89 | 500 |
+| Zrýchlenie | 368.03× | — |
 
 Poznámky:
 - Pôvodná fronta (JSON stringify) trvala ~218 s na 100k operácií, optimalizovaná verzia pod 1 s.
